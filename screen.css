@@ -28,17 +28,17 @@ body {
   padding-right: 1.222em; /* 22 / 18 = 1.222 */
   padding-left: 1.222em; /* 22 / 18 = 1.222 */
 }
-
+h1{
+	text-align: center;
+	font-size: 9vw;
+	line-height: 9vw;
+	color: black;
+}
 h1,h2,h3,p,h4,h5 {
   padding-bottom: 1.222em;
 }
-h1 {
+h3,h4,h5 {
   color: #666;
-}
-h2 {
-  font-size: 1.777em; /* 31.984 / 18 = 1.777 */
-  line-height: 1.0318em; /* 33 / 31.984 = 1.0318 */
-  padding-bottom: 0.689em; /* 22 / 31.984 = 0.689 */
 }
 h3,h4,h5 {
   font-weight: bold;
@@ -74,21 +74,21 @@ b,strong {
   font-weight: bold;
 }
 /* Layout */
-#navigation {
+#navigationtools {
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
 }
-#navigation li {
+#navigationtools li {
   width: 33.333333%;
   float: left;
 }
 
-.flexbox #navigation ul {
+.flexbox #navigationtools ul {
   display: flex;
 }
-.flexbox #navigation li {
+.flexbox #navigationtools li {
   float: none;
 }
 
