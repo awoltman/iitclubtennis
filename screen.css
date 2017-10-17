@@ -84,6 +84,13 @@ b,strong {
   width: 33.333333%;
   float: left;
 }
+#tournaments {
+  width: 100%;
+}
+#tournaments ul{
+	width: 100%;
+	float: left;
+}
 
 .flexbox #navigationtools ul {
   display: flex;
@@ -91,7 +98,7 @@ b,strong {
 .flexbox #navigationtools li {
   float: none;
 }
-
+/*
 /* Modular */
 nav ul {
   list-style-type: none;
@@ -118,66 +125,24 @@ nav a {
   }
 }
 
-@media screen and (min-width: 720px) {
+@media screen and (min-width: 750px) {
   body {
     padding-right: 11.1111111%; /* 80 / 720 = 0.111111111 */
     padding-left: 11.1111111%; /* 80 / 720 = 0.111111111 */
   }
-}
-
-@media screen and (min-width: 920px) {
-  /*
-   920px / whole screen
-   -60px / margins (total)
-   275px / column
-    17.5px / gutter
-   Left-hand column : 275 * 2 + 17.5 = 567.5
-   Right-hand column: 275px, offset by 17.5
-  */
-  body {
-
-  }
-  #primary {
-    width: 65.9883721%; /* 567.5 / 860 = 0.659883721 */
-    float: left;
-  }
-  #supporting {
-    width: 31.9767442%; /* 275 / 860 = 0.319767442 */
-    margin-left: 2.0348837%; /* 17.5 / 860 = 0.020348837 */
-    float: left;
-  }
-
-  .flexbox #content {
-    display: flex;
-  }
-  .flexbox #primary,
-  .flexbox #supporting {
-    float: none;
-    margin: 0;
-    width: auto;
-  }
-
-  .cssgrid #content {
+  .cssgrid #tournaments {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    grid-column-gap: 2.0348837%; /* 17.5 / 860 = 0.020348837 */
     grid-column-gap: 35px;
   }
-  .cssgrid #primary {
+  .cssgrid #national {
     grid-column: 1 / 3;
   }
-  .cssgrid #supporting {
-    grid-column: 3 / 4;
+  .cssgrid #regional {
+    grid-column: 1 / 3;
   }
-
-  #footer {
-    clear: both;
-    float: none;
+  .cssgrid #others {
+	grid-column: 1 / 3;
   }
 }
-@media screen and (min-width: 1185px) {
-  body {
-    padding-right: 20%;
-    padding-left: 20%;
-  }
-}
+  
