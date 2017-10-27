@@ -34,7 +34,8 @@ html {
 figcaption{
   line-height: 1em;
   font-size: .5625em; /*  18/32 = .5625 */
-	text-align: center;
+  text-align: center;
+  padding-bottom: 1em;
 }
 body {
   padding-top: 3.666em; /* 66 / 18 = 3.666 */
@@ -46,6 +47,11 @@ h1{
 	font-size: 8vw;
 	line-height: 8vw;
 	color: black;
+}
+h2 {
+  font-size: 2em;
+  color: black;
+  font-weight: bold;
 }
 h1,h2,h3,p,h4,h5,h11,h12 {
   padding-bottom: 1.222em;
@@ -144,6 +150,28 @@ nav a {
   }
 }
 @media screen and (min-width: 430px) /* this is where some names break */{
+  .cssgrid #Contact {
+    display: grid;
+	grid-template-columns: 1fr 1fr ;
+	grid-template-rows: 1fr 1fr ;
+    grid-column-gap: 30px;
+  }
+  .cssgrid #prez {
+	grid-column: 1 ;
+	grid-row: 1;
+  }
+  .cssgrid #vice-prez {
+	grid-column: 2 ;
+	grid-row: 1 ;
+  }
+  .cssgrid #treasure {
+	grid-column: 1 ;
+	grid-row: 2 ;
+  }
+  .cssgrid #secretary {
+	grid-column: 2 ;
+	grid-row: 2 ;
+  }
   .cssgrid #Members {
     display: grid;
 	grid-template-columns: 1fr 1fr;
