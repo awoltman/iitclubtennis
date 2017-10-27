@@ -23,7 +23,7 @@ html {
   -ms-text-size-adjust: 100%;
   text-size-adjust: 100%;
 }
-#mainpicture {
+#mainpicture, #teampicture {
   display: block;
   max-width: 100%;
   max-height: 1vp;
@@ -31,8 +31,9 @@ html {
   margin-right: auto; 
 }
 figcaption{
+  line-height: 1em;
   font-size: .5625em; /*  18/32 = .5625 */
-	text-align: auto;
+	text-align: center;
 }
 body {
   padding-top: 3.666em; /* 66 / 18 = 3.666 */
@@ -45,13 +46,12 @@ h1{
 	line-height: 8vw;
 	color: black;
 }
-h1,h2,h3,p,h4,h5 {
+h1,h2,h3,p,h4,h5,h11,h12 {
   padding-bottom: 1.222em;
 }
-h3,h4,h5 {
-  color: #666;
-}
-h3,h4,h5 {
+
+h3,h4,h5,h7,h8,h9,h10,h11,h12 {
+  color: black;
   font-weight: bold;
   padding-top: 1.222em; /* 22 / 18 = 1.222 */
   padding-bottom: 0.611em; /* 11 / 18 = 0.611 */
@@ -69,11 +69,18 @@ ul {
 ol {
   list-style-type: decimal;
 }
+li > ul > li {
+  list-style-type: circle;
+}
 li > ul,
 li > ol {
   padding-top:  0.611em; /* 11 / 18 = 0.611 */
   padding-left: 1.222em; /* 22 / 18 = 1.222 */
   padding-bottom: 0;
+}
+ul > li {
+  list-style-position: inside;
+  color: #666;
 }
 li li:last-child {
   padding-bottom: 0;
@@ -135,8 +142,20 @@ nav a {
     font-size: 1.25em; /* 20 / 16 = 1.25 */
   }
 }
-
-@media screen and (min-width: 750px) {
+@media screen and (min-width: 430px) /* this is where some names break */{
+  .cssgrid #Members {
+    display: grid;
+	grid-template-columns: 1fr 1fr;
+    grid-column-gap: 35px;
+  }
+  .cssgrid #Men {
+    grid-column: 1 ;
+  }
+  .cssgrid #Women {
+    grid-column: 2 ;
+  }
+}
+@media screen and (min-width: 650px) {
   .cssgrid #tournaments {
     display: grid;
 	grid-template-columns: 1fr 1fr;
@@ -152,6 +171,18 @@ nav a {
   .cssgrid #others {
 	grid-column: 1;
 	grid-row: 2;
+  }
+
+  .cssgrid #Members {
+    display: grid;
+	grid-template-columns: 1fr 1fr;
+    grid-column-gap: 35px;
+  }
+  .cssgrid #Men {
+    grid-column: 1 ;
+  }
+  .cssgrid #Women {
+    grid-column: 2 ;
   }
 
   .cssgrid #Contact {
@@ -178,7 +209,7 @@ nav a {
   }
   
 }
-@media screen and (min-width: 1150px){
+@media screen and (min-width: 950px){
 	.cssgrid #tournaments {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
