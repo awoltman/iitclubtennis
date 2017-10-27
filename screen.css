@@ -15,6 +15,7 @@ a,abbr,acronym,address,applet,article,aside,audio,b,big,blockquote,body,canvas,c
 */
 
 html {
+  background-color: tan;
   font-size: 1.125em; /* 18 / 16 = 1.125 */
   line-height: 1.222em; /* 22 / 18 = 1.222 */
   text-rendering: optimizeLegibility;
@@ -61,7 +62,7 @@ li {
 }
 ul,ol {
   padding-bottom: 0.611em; /* 11 / 18 = 0.611 */
-  color: red;
+  color: mediumblue;
 }
 ul {
   list-style-type: square;
